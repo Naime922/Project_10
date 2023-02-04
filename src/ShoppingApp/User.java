@@ -72,5 +72,15 @@ private UserType userType;
     // *              pass product price to cart setTotal method
     public void addToCart(Product product){
       getCart().getCartProduct().add(product);
+      cart.setTotal(product.getPrice());
     }
+//    * Create void removeFromCard method with Product product parameter
+// *              In this method remove product from cartProducts list and
+// *              pass negative product price to cart setTotal method
+
+    public void removeFromCard(Product product){
+        getCart().getCartProduct().remove(product);
+        cart.setTotal(-product.getPrice());
+    }
+
 }

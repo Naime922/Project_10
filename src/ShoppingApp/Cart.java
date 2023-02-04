@@ -30,7 +30,7 @@ public class Cart {
     }
 
     public void setTotal(double total) {
-        this.total = total;
+        this.total += total;
     }
 
     public List<Product> getCartProduct() {
