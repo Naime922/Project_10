@@ -83,5 +83,6 @@ private UserType userType;
         cart.setTotal(-product.getPrice());
     }
     //this is a not
+    //let's check my comment
 
 }
