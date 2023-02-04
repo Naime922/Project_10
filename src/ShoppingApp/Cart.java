@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** This class has
- *              private double total variable and private list of products named cartProducts
+ *              private double total variable and
+ *              private list of products named cartProducts
  * Create a constructor with no parameters. In the constructor
  *              set total to 0.
  *              initialize the list
