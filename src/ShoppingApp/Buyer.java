@@ -1,6 +1,6 @@
 package ShoppingApp;
 
-public abstract class Buyer{
+public abstract class Buyer {
 
 
 
