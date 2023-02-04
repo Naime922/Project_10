@@ -82,5 +82,6 @@ private UserType userType;
         getCart().getCartProduct().remove(product);
         cart.setTotal(-product.getPrice());
     }
+    //this is a not
 
 }
