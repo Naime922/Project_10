@@ -1,10 +1,8 @@
 package ShoppingApp;
 
- public enum PaymentMethod {
+public enum PaymentMethod {
     CREDITCARD,CASHonDELIVERY
-
-
-    /** This is an Enum class. It has 2 values;
+     /** This is an Enum class. It has 2 values;
      *                  CREDITCARD and CASHonDELIVERY
      **/
 
