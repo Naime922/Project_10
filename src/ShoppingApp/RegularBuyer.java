@@ -21,8 +21,8 @@ import static ShoppingApp.PaymentMethod.CREDITCARD;
     public void checkOut(PaymentMethod paymentMethod) {
         //sellProduct() method will be added for ach product
 
-        double shipping = calculateShippingCost(paymentMethod);
-        double cardTotal = calculateShippingCost() + getCart().getTotal();
+       // double shipping = calculateShippingCost(paymentMethod);
+       // double cardTotal = calculateShippingCost() + getCart().getTotal();
         if (paymentMethod.equals(CREDITCARD)) {
             System.out.println("$cardTotal+shipping has been deducted from your card");
         } else if (paymentMethod.equals(CASHonDELIVERY)) {
