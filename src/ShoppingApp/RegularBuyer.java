@@ -29,11 +29,6 @@ import static ShoppingApp.PaymentMethod.CREDITCARD;
                 System.out.println("The amount you must pay on delivery is " + (getCart().getTotal()+calculateShippingCost()));
             }
 
-        }
-
-
-    }
-
 
      // implement calculateShipping method. In the method
     //          if cart total is less than $50 return cartTotal*0.10
