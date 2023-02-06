@@ -11,4 +11,5 @@ public class RegularSeller {
      *                  set balance to productPrice-productPrice*feeFromPerSale
      *                  and reduce product stock by 1
      * */
+
 }
