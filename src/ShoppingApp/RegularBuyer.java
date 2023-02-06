@@ -15,7 +15,7 @@ import static ShoppingApp.PaymentMethod.CREDITCARD;
       *      call sellProduct method for each product and
       *      if payment method is CREDITCARD print "$cardTotal+shipping has been deducted from your card"
       *      if payment method is CASHonDELIVERY print "The amount you must pay on delivery is $cardTotal+shipping"
-  }    */
+      */
 
      @Override
      public void checkOut(PaymentMethod paymentMethod) {
@@ -23,28 +23,24 @@ import static ShoppingApp.PaymentMethod.CREDITCARD;
          for (Product product : getCart().getCartProduct()) {
              product.getSeller().sellProduct(product);
          }
-             if (paymentMethod.equals(PaymentMethod.CREDITCARD)) {
-                 System.out.println(getCart().getTotal() + calculateShippingCost() + " has been deducted from your card");
-             } else if (paymentMethod.equals(PaymentMethod.CASHonDELIVERY)) {
-                 System.out.println("The amount you must pay on delivery is " + (getCart().getTotal() + calculateShippingCost()));
-             }
 
-
-     }
-
-     // implement calculateShipping method. In the method
-     //          if cart total is less than $50 return cartTotal*0.10
-     @Override
-     public double calculateShippingCost() {
-         if (getCart().getTotal() < 50) {
-             return getCart().getTotal() * 0.10;
+         if (paymentMethod.equals(PaymentMethod.CREDITCARD)) {
+             System.out.println(getCart().getTotal() + calculateShippingCost() + " has been deducted from your card");
+         } else if (paymentMethod.equals(PaymentMethod.CASHonDELIVERY)) {
+             System.out.println("The amount you must pay on delivery is " + (getCart().getTotal() + calculateShippingCost()));
          }
-         return 0;
      }
- }
 
+         // implement calculateShipping method. In the method
+         //          if cart total is less than $50 return cartTotal*0.10
+         public double calculateShippingCost() {
+             if (getCart().getTotal() < 50) {
+                 return getCart().getTotal() * 0.10;
+             }
+             return 0;
 
-
+         }
+     }
 
 
 
