@@ -19,5 +19,5 @@ public abstract class Buyer extends User{
     public abstract double calculateShippingCost(PaymentMethod paymentMethod);
 
 
-
+    public abstract double calculateShippingCost();
 }

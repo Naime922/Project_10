@@ -37,7 +37,7 @@ public class Cart {
         return cartProduct;
     }
 
-    public void setCartProduct(List<Product> cartProduct) {
+    public void setCartProduct() {
         this.cartProduct = cartProduct;
     }
 
