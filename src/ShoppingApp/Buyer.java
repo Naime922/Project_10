@@ -19,6 +19,8 @@ public abstract class Buyer extends User {
     public abstract void checkOut(PaymentMethod paymentMethod);
 
     public abstract double calculateShippingCost();
+
+
 }
 
 
