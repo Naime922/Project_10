@@ -20,5 +20,4 @@ public abstract class Buyer extends User {
 
     public abstract double calculateShippingCost();
 
-    public abstract double calculateShippingCost();
 }
