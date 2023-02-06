@@ -4,7 +4,7 @@ package ShoppingApp;
 import static ShoppingApp.PaymentMethod.CASHonDELIVERY;
 import static ShoppingApp.PaymentMethod.CREDITCARD;
 
- public abstract class RegularBuyer extends Buyer {
+ public class RegularBuyer extends Buyer {
     // This class inherits from Buyer class. It has no additional variables
     //  Create a corresponding constructor to super
     public RegularBuyer(String name, String address) {
@@ -20,16 +20,23 @@ import static ShoppingApp.PaymentMethod.CREDITCARD;
     @Override
     public void checkOut(PaymentMethod paymentMethod) {
         //sellProduct() method will be added for ach product
+        for (Product product: getCart().getCartProduct()) {
+            product.getSeller().sellProduct(product);
 
-        double shipping = calculateShippingCost(paymentMethod);
-        double cardTotal = calculateShippingCost() + getCart().getTotal();
-        if (paymentMethod.equals(CREDITCARD)) {
-            System.out.println("$cardTotal+shipping has been deducted from your card");
-        } else if (paymentMethod.equals(CASHonDELIVERY)) {
-            System.out.println("The amount you must pay on delivery is $cardTotal+shipping");
+            if(paymentMethod.equals(PaymentMethod.CREDITCARD)){
+                System.out.println(getCart().getTotal()+calculateShippingCost() + " has been deducted from your card");
+            } else if (paymentMethod.equals(PaymentMethod.CASHonDELIVERY)) {
+                System.out.println("The amount you must pay on delivery is " + (getCart().getTotal()+calculateShippingCost()));
+            }
+
         }
+
+
     }
 
+
+     // implement calculateShipping method. In the method
+    //          if cart total is less than $50 return cartTotal*0.10
     @Override
     public double calculateShippingCost() {
         if (getCart().getTotal() < 50) {
