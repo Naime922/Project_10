@@ -10,7 +10,7 @@ public abstract class Seller extends User{
      *                      private list of Product named products,
      *                      private double balance,
      *                      private double feeFromPerSale variables*/
-    private List<Product>products=new ArrayList<>();
+    private List<Product>products;
     private double balance;
     private double feeFromPerSale;
 
@@ -18,11 +18,12 @@ public abstract class Seller extends User{
     public Seller(String name, String address) {
         super(name, address);
         this.balance=0;
+        products=new ArrayList<>();
     }
 
 
     /** Create getters and setters for all fields.*/
-  public List<Product> getProducts() {
+    public List<Product> getProducts() {
         return products;
     }
 
