@@ -50,7 +50,7 @@ public abstract class Seller extends User{
     /** Create a void addProduct method with a Product product parameter.
       In this method set productSeller to this and add the product to products list.*/
     public void addProduct(Product product){
-        product.setSeller(product.getSeller());
+        product.setSeller(this);
         products.add(product);
 }
 
