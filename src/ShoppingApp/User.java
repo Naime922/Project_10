@@ -23,6 +23,12 @@ private Cart cart;
 private double shippingCost;
 private UserType userType;
 
+    public User(String name, String address) {
+        this.name = name;
+        this.address = address;
+        cart=new Cart();
+    }
+
     public String getName() {
         return name;
     }
@@ -63,16 +69,13 @@ private UserType userType;
         this.userType = userType;
     }
 
-    public User(String name, String address) {
-        this.name = name;
-        this.address = address;
-    }
+
     //Create void addToCart method with a Product product parameter.
     // *              In this method add the product to cartProducts list and
     // *              pass product price to cart setTotal method
     public void addToCart(Product product){
-      getCart().getCartProduct().add(product);
-      cart.setTotal(product.getPrice());
+        getCart().getCartProduct().add(product);
+        getCart().setTotal(product.getPrice());
     }
 //    * Create void removeFromCard method with Product product parameter
 // *              In this method remove product from cartProducts list and

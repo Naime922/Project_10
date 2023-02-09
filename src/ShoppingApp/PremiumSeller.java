@@ -26,10 +26,6 @@ public class PremiumSeller extends Seller{
         product.setStock(product.getStock()-1);
     }
 
-    /*     * Implement sellProduct method and in the method
-     *                  set balance to productPrice-productPrice*feeFromPerSale
-     *                  and reduce product stock by 1
-            * */
 }
 
 
